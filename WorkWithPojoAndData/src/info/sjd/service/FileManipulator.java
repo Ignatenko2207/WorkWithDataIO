@@ -1,7 +1,6 @@
 package info.sjd.service;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,12 +19,10 @@ public class FileManipulator {
 
 	public static void writeToFile(Good good, Boolean append) {
 		FileWriter writer = null;
-		
 		try {
 			writer = new FileWriter(PATH_TO_FILE, append);
 			writer.write(good.toString() + ";\n");
 			writer.flush();
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -39,7 +36,6 @@ public class FileManipulator {
 
 	public static List<Good> readFromFile() {
 		List<Good> goodList = new ArrayList<>();
-		
 		FileReader reader = null;
 		BufferedReader buffReader = null;
 		try {
@@ -67,9 +63,6 @@ public class FileManipulator {
 				e.printStackTrace();
 			}
 		}
-		
 		return goodList;
 	}
-	
-	
 }
