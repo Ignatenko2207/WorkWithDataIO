@@ -16,7 +16,7 @@ public class FileManipulator {
 
 	private static final String SEP = System.getProperty("file.separator");
 	
-	private static final String PATH_TO_FILE = USER_DIR + SEP + "test" + SEP + "test.csv";
+	private static final String PATH_TO_FILE = USER_DIR + SEP + "file-source" + SEP + "test.csv";
 
 	public static void writeToFile(Good good, Boolean append) {
 		FileWriter writer = null;
