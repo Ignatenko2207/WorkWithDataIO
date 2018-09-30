@@ -20,7 +20,6 @@ public class FileManipulator {
 
 	public static void writeToFile(Good good, Boolean append) {
 		FileWriter writer = null;
-		
 		try {
 			writer = new FileWriter(PATH_TO_FILE, append);
 			writer.write(good.toString() + ";\n");
@@ -67,9 +66,6 @@ public class FileManipulator {
 				e.printStackTrace();
 			}
 		}
-		
 		return goodList;
 	}
-	
-	
 }
